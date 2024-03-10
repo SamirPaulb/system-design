@@ -5757,5 +5757,17 @@ _All the diagrams were made using [Excalidraw](https://excalidraw.com) and are a
 
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/style.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js" integrity="sha512-N9IJRoc3LaP3NDoiGkcPa4gG94kapGpaA5Zq9/Dr04uf5TbLFU5q0o8AbRhLKUUlp8QFS2u7S+Yti0U7QtuZvQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+const images = Array.from(document.querySelectorAll(".post-content img"));
+images.forEach(img => {
+  mediumZoom(img, {
+  margin: 0, /* The space outside the zoomed image */
+  scrollOffset: 40, /* The number of pixels to scroll to close the zoom */
+  container: null, /* The viewport to render the zoom in */
+  template: null, /* The template element to display on zoom */
+  background: 'rgba(0, 0, 0, 0.8)'
+  });
+});
+</script>
